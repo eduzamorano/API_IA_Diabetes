@@ -32,8 +32,8 @@ def predict():
 
             return jsonify({'trace': traceback.format_exc()})
     else:
-        print ('Train the model first')
-        return ('No model here to use')
+        print ('Entrene modelo antes')
+        return ('No existe modelo')
 
 if __name__ == '__main__':
     try:
@@ -41,9 +41,9 @@ if __name__ == '__main__':
     except:
         port = 12345 # If you don't provide any port the port will be set to 12345
 
-    lr = joblib.load("../model_log_regv3.pkl") # Load "model.pkl"
-    sc = joblib.load("../scalerv3.pkl") # Load "scaler.pkl"
-    print ('Model loaded')
+    lr = joblib.load("model/model_log_regv3.pkl") # Load "model.pkl"
+    sc = joblib.load("model/scalerv3.pkl") # Load "scaler.pkl"
+    print ('Modelo Cargado')
    # model_columns = joblib.load("model_columns.pkl") # Load "model_columns.pkl"
     #print ('Model columns loaded')
 

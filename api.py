@@ -1,11 +1,11 @@
-# Dependencies
+# Dependencias
 from flask import Flask, request, jsonify
 import joblib
 import traceback
 import pandas as pd
 import numpy as np
 
-# Your API definition
+# Definición de API
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
